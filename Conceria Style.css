@@ -21,7 +21,7 @@ ol, ul {
   list-style: none;
 }
 
-h1, h2, h3, p {
+h1, h2, h3, p, a {
   font-family: "Open Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400; /* CORRETTO: valore valido invece di <weight> */
@@ -252,9 +252,48 @@ button:hover {
     background-color: #0c465b;
 }
 
+
+.white-boxes-container {
+            background-color: white;
+            padding: 50px 20px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+
+
+.controllo-container, .ricerca-container {
+            background-color: #039fd8;
+            width: 300px;
+            height: 300px;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
+
+.controllo-container:hover, .ricerca-container:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+        }
+
 .certificazioni {
-  max-width: 800px;
   background-color:#039fd8;
+  transition: transform 0.3s ease;
+}
+
+
+.certificazioni img:hover {
+    cursor: pointer;
+    transform: scale(1.1); /* piccolo effetto al passaggio */
 }
 
 .social-media {
@@ -267,12 +306,14 @@ button:hover {
     align-items: center;
 }
 
+
+
 .social-media img {
     width: 40px;
     height: 40px;
-    transition: transform 0.3s ease;
     cursor: pointer;
 }
 .social-media img:hover {
-    transform: scale(1.1); /* piccolo effetto al passaggio */
+    filter: brightness(0) saturate(100%) invert(50%) sepia(99%) saturate(500%) hue-rotate(180deg);
+    transform: scale(1.1);
 }
